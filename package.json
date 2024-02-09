@@ -1,0 +1,38 @@
+{
+  "name": "express-docker",
+  "version": "1.0.0",
+  "description": "My description here.",
+  "private": true,
+  "author": "Junihor Moran",
+  "license": "MIT",
+  "engines": {
+    "npm": ">=9.8.1",
+    "node": ">=18.18.0"
+  },
+  "main": "src/index.mjs",
+  "options": {
+    "allow-unauthenticated": true,
+    "memory": "256Mi",
+    "cpu": "1",
+    "port": 3000,
+    "http2": false
+  },
+  "scripts": {
+    "start": "node src/index.mjs",
+    "dev": "nodemon src/index.mjs",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "serverless deploy",
+    "remove": "serverless remove"
+  },
+  "dependencies": {
+    "csv-parse": "^5.5.3",
+    "dotenv": "^16.4.1",
+    "express": "^4.18.2",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3",
+    "serverless": "^3.38.0",
+    "serverless-offline": "^13.3.3"
+  }
+}

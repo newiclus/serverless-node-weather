@@ -1,0 +1,16 @@
+service: express-docker
+
+frameworkVersion: ">=1.1.0"
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+
+functions:
+  api:
+    handler: src/index.handler
+    events:
+      - httpApi: "GET /"
+
+plugins:
+  - serverless-offline
